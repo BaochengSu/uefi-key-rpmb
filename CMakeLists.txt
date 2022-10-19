@@ -3,7 +3,7 @@ project(uefi-key-rpmb VERSION 1.0)
 
 add_executable(poc 
     poc.c
-    stmm-helper.c
+    stmm.c
 )
 
 target_include_directories(poc PUBLIC /usr/include/efi/aarch64)
