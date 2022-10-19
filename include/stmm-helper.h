@@ -148,4 +148,6 @@ uint32_t stmm_setup_comm_buf_hdr(void *comm_buf,
 				 uint8_t func,
 				 void **payload_ptr);
 
+unsigned int stmm_get_ret_status(void *comm_buf);
+
 #endif /* STMM_HELPER_H */

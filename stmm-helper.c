@@ -56,3 +56,14 @@ uint32_t stmm_setup_comm_buf_hdr(void *comm_buf,
 
 	return E_OK;
 }
+
+unsigned int stmm_get_ret_status(void *comm_buf)
+{
+	efi_mm_communicate_header 	*mm_hdr;
+	smm_variable_communicate_header *var_hdr;
+
+	mm_hdr = (efi_mm_communicate_header *)comm_buf;
+	var_hdr = (smm_variable_communicate_header *)mm_hdr->data;
+
+	return var_hdr->ret_status;
+}

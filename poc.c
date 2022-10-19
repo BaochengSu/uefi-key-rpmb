@@ -47,7 +47,7 @@ static void get_max_payload(TEEC_Context *ctx, TEEC_Session *sess)
 		errx(1, "TEEC_InvokeCommand failed with code 0x%x origin 0x%x",
 			res, err_origin);
 
-	printf("TA returns status: 0x%08x\n", var_hdr->ret_status);
+	printf("TA returns status: 0x%08x\n", stmm_get_ret_status(shm_mm.buffer));
 	printf("TA returns value: 0x%08x\n", op.params[0].value.a);
 	printf("TA returns max payload size: %u\n", payload->size);
 
