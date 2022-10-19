@@ -140,14 +140,7 @@ struct smm_variable_access {
 	uint16_t         name[];
 };
 
-EFI_GUID mm_var_guid = {
-	0xed32d533,
-	0x99e6,
-	0x4209,
-	{
-		0x9c, 0xc0, 0x2d, 0x72, 0xcd, 0xd9, 0x98, 0xa7
-	}
-};
+
 
 uint32_t stmm_get_comm_buf_size(uint8_t func);
 uint32_t stmm_setup_comm_buf_hdr(void *comm_buf,

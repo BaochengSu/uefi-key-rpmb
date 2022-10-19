@@ -31,7 +31,7 @@ static void get_max_payload(TEEC_Context *ctx, TEEC_Session *sess)
 	stmm_setup_comm_buf_hdr(shm_mm.buffer,
 				shm_mm.size,
 				SMM_VARIABLE_FUNCTION_GET_PAYLOAD_SIZE,
-				&payload);
+				(void **)&payload);
 
 	memset(&op, 0, sizeof(op));
 	op.paramTypes = TEEC_PARAM_TYPES(TEEC_MEMREF_WHOLE, 
