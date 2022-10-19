@@ -150,6 +150,9 @@ EFI_GUID mm_var_guid = {
 };
 
 uint32_t stmm_get_comm_buf_size(uint8_t func);
-uint32_t stmm_setup_comm_buf_hdr(void *comm_buf, uint32_t size);
+uint32_t stmm_setup_comm_buf_hdr(void *comm_buf,
+				 uint32_t size,
+				 uint8_t func,
+				 void **payload_ptr);
 
 #endif /* STMM_HELPER_H */
